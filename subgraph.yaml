@@ -1,0 +1,18 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: near
+    name: blockjobs
+    network: near-testnet
+    source:
+      account: "blockjobs.testnet"
+      startBlock: 81296620
+    mapping:
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Dispute
+      receiptHandlers:
+        - handler: handleReceipt
+      file: ./src/mapping.ts

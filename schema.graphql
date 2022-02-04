@@ -1,0 +1,15 @@
+type Dispute @entity {
+  id: ID!
+  serviceId: String! 
+  applicant: String!
+  accused: String!
+  initialTime: BigInt!
+  finalTime: BigInt
+  jury: [String!]
+  votes: [Boolean!]
+  state: String
+  winner: String
+  applicantProves: String!
+  accusedProves: String!
+  price: BigInt!
+}
